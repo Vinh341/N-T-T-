@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>QR Code</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>N-T-T Trang Chủ</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    body {
       font-family: Arial, sans-serif;
+      margin: 2rem;
+      background-color: #f9f9f9;
+      text-align: center;
     }
-
+    p {
+      color: #333;
+    }
     #qrcode {
-      width: 80vmin;
-      height: 80vmin;
-      max-width: 300px;
-      max-height: 300px;
+      margin: 2rem auto;
+      width: 300px;
+      height: 300px;
     }
   </style>
 </head>
 <body>
+  <p>Quét mã QR bên dưới để truy cập trang web này trên mọi thiết bị.</p>
+
   <div id="qrcode"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script>
-    var url = "https://vinh341.github.io/N-T-T-/";
- // <-- thay bằng URL thực tế nếu có
     new QRCode(document.getElementById("qrcode"), {
-      text: url,
-      width: document.getElementById("qrcode").offsetWidth,
-      height: document.getElementById("qrcode").offsetHeight,
-      colorDark : "#000000",
-      colorLight : "#ffffff"
+      text: "https://vinh341.github.io/N-T-T-/",
+      width: 300,
+      height: 300,
+      colorDark: "#000000",
+      colorLight: "#ffffff"
     });
   </script>
 </body>
