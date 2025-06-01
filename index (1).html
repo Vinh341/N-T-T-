@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>QR Code</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    #qrcode {
+      width: 80vmin;
+      height: 80vmin;
+      max-width: 300px;
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div id="qrcode"></div>
+  <script>
+    var url = "https://example.com/index.html"; // <-- thay bằng URL thực tế nếu có
+    new QRCode(document.getElementById("qrcode"), {
+      text: url,
+      width: document.getElementById("qrcode").offsetWidth,
+      height: document.getElementById("qrcode").offsetHeight,
+      colorDark : "#000000",
+      colorLight : "#ffffff"
+    });
+  </script>
+</body>
+</html>
